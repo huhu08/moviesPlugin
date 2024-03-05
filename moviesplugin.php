@@ -7,6 +7,11 @@
 *Author: Huda
 *
 */
+function movie_api_enqueue_scripts() {
+    wp_enqueue_style('movie-api-style', plugins_url('css/style.css', __FILE__));
+    wp_enqueue_script('movie-api-script', plugins_url('js/script.js', __FILE__), array('jquery'), '1.0', true);
+}
+
 add_action('wp_enqueue_scripts', 'movie_api_enqueue_scripts');
 
 // Shortcode to display movie information

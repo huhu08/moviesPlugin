@@ -1,0 +1,14 @@
+.movie-info {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.movie-info h2 {
+    color: #ffd700; /* Set the heading color to gold */
+}
+
+.movie-info p {
+    margin: 0;
+}
