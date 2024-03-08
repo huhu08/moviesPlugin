@@ -7,6 +7,7 @@
 *Author: Huda
 *
 */
+echo "Plugin Works!";
 function movie_api_enqueue_scripts() {
     wp_enqueue_style('movie-api-style', plugins_url('css/style.css', __FILE__));
     wp_enqueue_script('movie-api-script', plugins_url('js/script.js', __FILE__), array('jquery'), '1.0', true);
@@ -16,8 +17,8 @@ add_action('wp_enqueue_scripts', 'movie_api_enqueue_scripts');
 
 // Shortcode to display movie information
 function movie_api_shortcode($atts) {
-    // API Endpoint URL
-//     $api_url = 'http://www.omdbapi.com/?apikey=YOUR_API_KEY';
+  //  API Endpoint URL
+    $api_url = 'https://sampleapis.com/movies/';
 
     // Fetch data from the API
     $response = wp_remote_get($api_url);
@@ -38,6 +39,6 @@ function movie_api_shortcode($atts) {
     // Add more information as needed
     $output .= '</div>';
     $output .= '<button class="toggle-movie-info">Toggle Movie Info</button>';
-
     return $output;
+    echo ($output);
 }
