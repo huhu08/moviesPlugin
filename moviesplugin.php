@@ -22,7 +22,7 @@ function movie_api_shortcode($atts) {
 
     // Fetch data from the API
     $response = wp_remote_get($api_url);
-
+    return $response;
     // Check for errors
     if (is_wp_error($response)) {
         return 'Error fetching movie data';
